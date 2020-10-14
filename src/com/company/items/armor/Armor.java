@@ -1,6 +1,6 @@
 package com.company.items.armor;
 
-public class Armor {
+public interface Armor {
     String getName ();
     int getStrength();
     int getHealth();

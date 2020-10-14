@@ -2,15 +2,15 @@ package com.company.heroes;
 
 import java.util.ArrayList;
 
-public class Hero {
+public abstract class Hero implements CharacterStatsChanger {
 
+    // Abstract Hero class containing
     // 1. Properties
 
-        // Attributes
-        private int health;
-        private int strength;
-        private int dexterity;
-        private int intelligence;
+        private String name;
+        private CharacterStats characterStats;
+        private Armor armor;
+        private Weapon weapon;
 
         // Level
         private int currentLevel = 1;
@@ -37,8 +37,8 @@ public class Hero {
         public void equipItem(String item){
             equipment.add(item);
             System.out.println("You have the following equipment:");
-            for (String item: equipment) {
-                System.out.println(item);
+            for (String it: equipment) {
+                System.out.println(it);
             }
         }
 
@@ -52,7 +52,7 @@ public class Hero {
     public Hero() {
     }
 
-    public Hero(int health, int strength, int dexterity, int intelligence, int currentLevel, int xpToNextLevel, ArrayList<String> equipment, String heroClass) {
+    public Hero(String name, int health, int strength, int dexterity, int intelligence, int currentLevel, int xpToNextLevel, ArrayList<String> equipment, String heroClass) {
         this.health = health;
         this.strength = strength;
         this.dexterity = dexterity;
@@ -65,6 +65,13 @@ public class Hero {
 
     // Getters and setters
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public int getHealth() {
         return health;

@@ -6,5 +6,4 @@ public interface Weapon {
     public String weaponType();
     public void setLevel(int Level);
     public int getLevel();
-    public String getName();
 }

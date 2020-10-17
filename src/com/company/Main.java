@@ -16,14 +16,12 @@ public class Main {
         // defining stats
         Hero mulan = exampleHeroFactory.create(HeroTypes.WARRIOR);
         Weapon katana = exampleWeaponFactory.create(WeaponTypes.MELEE);
+        Weapon crossbow = exampleWeaponFactory.create(WeaponTypes.RANGED);
+        Weapon wand = exampleWeaponFactory.create(WeaponTypes.MAGIC);
         Armor cloth = exampleArmorFactory.create(ArmorTypes.CLOTH);
 
-        // setting the new character with the type, weapon and armor
-        mulan.setName("Fa Mulan");
-        mulan.equipWithWeapon(katana);
-        mulan.equipWithArmor(cloth);
-
         // Showing the main hero info
+        mulan.setName("Fa Mulan");
         System.out.println("------------");
         System.out.println("Your new Hero is: " + mulan.getName());
         System.out.println("Your current level is: " + mulan.getCurrentLevel());
@@ -32,14 +30,32 @@ public class Main {
         System.out.println("Your hero's dexterity is " + mulan.getHeroStats().getDexterity());
         System.out.println("Your hero's intelligence is " + mulan.getHeroStats().getIntelligence());
 
-        // Showing weapon data
+        // Showing melee weapon data
+        mulan.equipWithWeapon(katana);
         System.out.println("------------");
         System.out.println("Your weapon is katana");
         System.out.println("Your weapon type is " + mulan.getWeapon().weaponType());
         System.out.println("Weapon level is " + mulan.getWeapon().getLevel());
         System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
 
+        // Showing ranged weapon data
+        mulan.equipWithWeapon(crossbow);
+        System.out.println("------------");
+        System.out.println("You've changed your weapon. Now your weapon is crossbow");
+        System.out.println("Your weapon type is " + mulan.getWeapon().weaponType());
+        System.out.println("Weapon level is " + mulan.getWeapon().getLevel());
+        System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
+
+        // Showing magic weapon data
+        mulan.equipWithWeapon(wand);
+        System.out.println("------------");
+        System.out.println("You've changed your weapon. Now your weapon is wand");
+        System.out.println("Your weapon type is " + mulan.getWeapon().weaponType());
+        System.out.println("Weapon level is " + mulan.getWeapon().getLevel());
+        System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
+
         // Showing the armor and adding its stats to hero stats
+        mulan.equipWithArmor(cloth);
         System.out.println("------------");
         System.out.println("Your armor is " + mulan.getArmor().getName());
         System.out.println("Your final stats with the armor on are:");
@@ -50,12 +66,12 @@ public class Main {
 
         // Showing the current level and how many XPs the hero needs to get to the next level
         System.out.println("------------");
-        int currentLevelXP = 0;
-        System.out.println("Your current XP level is " + currentLevelXP + " You need " + mulan.calculateXpToNextLevel(currentLevelXP) + " XP to get to the next level.");
+        int currentLevelXP = 20;
+        System.out.println("Your current XP level is " + currentLevelXP + " You need to reach " + mulan.calculateXpToNextLevel(currentLevelXP) + " XP to get to the next level.");
 
         // Showing the next level and how many XPs the hero needs to get to the next level raised by 10%
         System.out.println("------------");
         int nextLevelXP = 100;
-        System.out.println("You are at level 2 now. You need " + mulan.calculateXpToNextLevel(nextLevelXP) + " XP to get to the next level.");
+        System.out.println("You are at level 2 now. You need to reach " + mulan.calculateXpToNextLevel(nextLevelXP) + " XP to get to the next level.");
     }
 }

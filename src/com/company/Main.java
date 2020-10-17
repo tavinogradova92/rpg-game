@@ -54,11 +54,37 @@ public class Main {
         System.out.println("Weapon level is " + mulan.getWeapon().getLevel());
         System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
 
-        // Showing the armor and adding its stats to hero stats
+        // Showing the body armor and adding its stats to hero stats
         mulan.equipWithArmor(cloth);
+        cloth.setSlot("Body");
         System.out.println("------------");
         System.out.println("Your armor is " + mulan.getArmor().getName());
-        System.out.println("Your final stats with the armor on are:");
+        System.out.println("Slot: " + cloth.getSlot());
+        System.out.println("Your final stats with the armor on your " + cloth.getSlot() + " are:");
+        System.out.println("Your hero's health is " + (mulan.getHeroStats().getHealth() + mulan.getArmor().getHealth()));
+        System.out.println("Your hero's strength is " + (mulan.getHeroStats().getStrength() + mulan.getArmor().getStrength()));
+        System.out.println("Your hero's dexterity is " + (mulan.getHeroStats().getDexterity() + mulan.getArmor().getDexterity()));
+        System.out.println("Your hero's intelligence is " + (mulan.getHeroStats().getIntelligence() + mulan.getArmor().getIntelligence()));
+
+        // Showing the head armor and adding its stats to hero stats
+        mulan.equipWithArmor(cloth);
+        cloth.setSlot("Head");
+        System.out.println("------------");
+        System.out.println("Your armor is " + mulan.getArmor().getName());
+        System.out.println("Slot: " + cloth.getSlot());
+        System.out.println("Your final stats with the armor on your " + cloth.getSlot() + " are:");
+        System.out.println("Your hero's health is " + (mulan.getHeroStats().getHealth() + mulan.getArmor().getHealth()));
+        System.out.println("Your hero's strength is " + (mulan.getHeroStats().getStrength() + mulan.getArmor().getStrength()));
+        System.out.println("Your hero's dexterity is " + (mulan.getHeroStats().getDexterity() + mulan.getArmor().getDexterity()));
+        System.out.println("Your hero's intelligence is " + (mulan.getHeroStats().getIntelligence() + mulan.getArmor().getIntelligence()));
+
+        // Showing the legs armor and adding its stats to hero stats
+        mulan.equipWithArmor(cloth);
+        cloth.setSlot("Legs");
+        System.out.println("------------");
+        System.out.println("Your armor is " + mulan.getArmor().getName());
+        System.out.println("Slot: " + cloth.getSlot());
+        System.out.println("Your final stats with the armor on your " + cloth.getSlot() + " are:");
         System.out.println("Your hero's health is " + (mulan.getHeroStats().getHealth() + mulan.getArmor().getHealth()));
         System.out.println("Your hero's strength is " + (mulan.getHeroStats().getStrength() + mulan.getArmor().getStrength()));
         System.out.println("Your hero's dexterity is " + (mulan.getHeroStats().getDexterity() + mulan.getArmor().getDexterity()));

@@ -1,24 +1,43 @@
 package com.company.items.armor;
 
 public class Cloth implements Armor {
+    private String slot;
+
+    public Cloth() {
+        this.slot = "";
+    }
+
     @Override
     public String getName() {
         return "Super Duper Cloth";
     }
 
     @Override
+    public void setSlot(String slot) {
+        this.slot = slot;
+    }
+
+    @Override
+    public String getSlot() {
+        return slot;
+    }
+
+    @Override
     public int getHealth() {
-        return ArmorStats.clothHealth;
+        String slot = getSlot();
+        return (int)(ArmorStats.clothHealth * SlotsScaler.countSlotsScaler(slot));
     }
 
     @Override
     public int getIntelligence() {
-        return ArmorStats.clothIntelligence;
+        String slot = getSlot();
+        return (int)(ArmorStats.clothIntelligence * SlotsScaler.countSlotsScaler(slot));
     }
 
     @Override
     public int getDexterity() {
-        return ArmorStats.clothDexterity;
+        String slot = getSlot();
+        return (int)(ArmorStats.clothDexterity * SlotsScaler.countSlotsScaler(slot));
     }
 
     @Override

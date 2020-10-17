@@ -2,9 +2,25 @@ package com.company.items.armor;
 
 public class Leather implements Armor {
 
+    private String slot;
+
+    public Leather() {
+        this.slot = "";
+    }
+
     @Override
     public String getName() {
         return "Super Duper Leather";
+    }
+
+    @Override
+    public void setSlot(String slot) {
+        this.slot = slot;
+    }
+
+    @Override
+    public String getSlot() {
+        return slot;
     }
 
     @Override

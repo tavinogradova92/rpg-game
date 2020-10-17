@@ -1,9 +1,26 @@
 package com.company.items.armor;
 
 public class Plate implements Armor {
+
+    private String slot;
+
+    public Plate() {
+        this.slot = "";
+    }
+
     @Override
     public String getName() {
         return "Super Duper Plate";
+    }
+
+    @Override
+    public void setSlot(String slot) {
+        this.slot = slot;
+    }
+
+    @Override
+    public String getSlot() {
+        return slot;
     }
 
     @Override

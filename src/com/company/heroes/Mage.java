@@ -1,6 +1,6 @@
 package com.company.heroes;
 
-public class Mage extends Hero implements Level {
+public class Mage extends Hero {
 
     private int level;
     private int currentXP;

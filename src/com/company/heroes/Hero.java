@@ -11,6 +11,8 @@ public abstract class Hero implements HeroStatsChanger {
         private HeroStats heroStats;
         private Armor armor;
         private Weapon weapon;
+        private int level;
+
 
     // Constructor
 
@@ -31,6 +33,14 @@ public abstract class Hero implements HeroStatsChanger {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCurrentLevel() {
+        return level;
+    }
+
+    void calculateXpToNextLevel(int xpToNextLevel) {
+
     }
 
     @Override

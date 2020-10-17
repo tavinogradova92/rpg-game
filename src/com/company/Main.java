@@ -23,6 +23,7 @@ public class Main {
         mulan.equipWithWeapon(katana);
         mulan.equipWithArmor(cloth);
 
+        // Showing the main hero info
         System.out.println("------------");
         System.out.println("Your new Hero is: " + mulan.getName());
         System.out.println("Your current level is: " + mulan.getCurrentLevel());
@@ -30,11 +31,15 @@ public class Main {
         System.out.println("Your hero's strength is " + mulan.getHeroStats().getStrength());
         System.out.println("Your hero's dexterity is " + mulan.getHeroStats().getDexterity());
         System.out.println("Your hero's intelligence is " + mulan.getHeroStats().getIntelligence());
+
+        // Showing weapon data
         System.out.println("------------");
         System.out.println("Your weapon is katana");
         System.out.println("Your weapon type is " + mulan.getWeapon().weaponType());
         System.out.println("Weapon level is " + mulan.getWeapon().getLevel());
         System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
+
+        // Showing the armor and adding its stats to hero stats
         System.out.println("------------");
         System.out.println("Your armor is " + mulan.getArmor().getName());
         System.out.println("Your final stats with the armor on are:");
@@ -42,9 +47,13 @@ public class Main {
         System.out.println("Your hero's strength is " + (mulan.getHeroStats().getStrength() + mulan.getArmor().getStrength()));
         System.out.println("Your hero's dexterity is " + (mulan.getHeroStats().getDexterity() + mulan.getArmor().getDexterity()));
         System.out.println("Your hero's intelligence is " + (mulan.getHeroStats().getIntelligence() + mulan.getArmor().getIntelligence()));
+
+        // Showing the current level and how many XPs the hero needs to get to the next level
         System.out.println("------------");
         int currentLevelXP = 0;
         System.out.println("Your current XP level is " + currentLevelXP + " You need " + mulan.calculateXpToNextLevel(currentLevelXP) + " XP to get to the next level.");
+
+        // Showing the next level and how many XPs the hero needs to get to the next level raised by 10%
         System.out.println("------------");
         int nextLevelXP = 100;
         System.out.println("You are at level 2 now. You need " + mulan.calculateXpToNextLevel(nextLevelXP) + " XP to get to the next level.");

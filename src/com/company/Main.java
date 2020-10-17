@@ -42,6 +42,11 @@ public class Main {
         System.out.println("Your hero's strength is " + (mulan.getHeroStats().getStrength() + mulan.getArmor().getStrength()));
         System.out.println("Your hero's dexterity is " + (mulan.getHeroStats().getDexterity() + mulan.getArmor().getDexterity()));
         System.out.println("Your hero's intelligence is " + (mulan.getHeroStats().getIntelligence() + mulan.getArmor().getIntelligence()));
-
+        System.out.println("------------");
+        int currentLevelXP = 0;
+        System.out.println("Your current XP level is " + currentLevelXP + " You need " + mulan.calculateXpToNextLevel(currentLevelXP) + " XP to get to the next level.");
+        System.out.println("------------");
+        int nextLevelXP = 100;
+        System.out.println("You are at level 2 now. You need " + mulan.calculateXpToNextLevel(nextLevelXP) + " XP to get to the next level.");
     }
 }

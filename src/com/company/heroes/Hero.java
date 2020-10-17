@@ -12,6 +12,7 @@ public abstract class Hero implements HeroStatsChanger {
         private Armor armor;
         private Weapon weapon;
         private int level;
+        private int xpToNextLevel;
 
 
     // Constructor
@@ -39,8 +40,8 @@ public abstract class Hero implements HeroStatsChanger {
         return level;
     }
 
-    void calculateXpToNextLevel(int xpToNextLevel) {
-
+    public int calculateXpToNextLevel(int xpToNextLevel) {
+        return xpToNextLevel;
     }
 
     @Override

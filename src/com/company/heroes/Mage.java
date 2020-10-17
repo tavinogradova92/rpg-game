@@ -26,7 +26,7 @@ public class Mage extends Hero {
 
     // Calculate if a Warrior can go one level up or not
     @Override
-    public void calculateXpToNextLevel(int xpToNextLevel) {
+    public int calculateXpToNextLevel(int xpToNextLevel) {
         currentXP += xpToNextLevel;
         int remainingXP = 0;
 
@@ -44,5 +44,6 @@ public class Mage extends Hero {
             nextLevelXP = (int) (nextLevelXP * 1.1);
             currentXP = 0 + remainingXP;
         }
+        return remainingXP;
     }
 }

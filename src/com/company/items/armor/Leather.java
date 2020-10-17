@@ -23,9 +23,14 @@ public class Leather implements Armor {
         return slot;
     }
 
+    public double slotsScaler() {
+        return SlotsScaler.countSlotsScaler(slot);
+    }
+
     @Override
     public int getHealth() {
-        return ArmorStats.leatherHealth;
+        String slot = getSlot();
+        return (int)(ArmorStats.leatherHealth * slotsScaler());
     }
 
     @Override
@@ -35,11 +40,13 @@ public class Leather implements Armor {
 
     @Override
     public int getDexterity() {
-        return ArmorStats.leatherDexterity;
+        String slot = getSlot();
+        return (int)(ArmorStats.leatherDexterity * slotsScaler());
     }
 
     @Override
     public int getStrength() {
-        return ArmorStats.leatherStrength;
+        String slot = getSlot();
+        return (int)(ArmorStats.leatherStrength * slotsScaler());
     }
 }

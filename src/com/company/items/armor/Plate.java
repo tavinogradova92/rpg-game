@@ -23,9 +23,14 @@ public class Plate implements Armor {
         return slot;
     }
 
+    public double slotsScaler() {
+        return SlotsScaler.countSlotsScaler(slot);
+    }
+
     @Override
     public int getHealth() {
-        return ArmorStats.plateHealth;
+        String slot = getSlot();
+        return (int)(ArmorStats.plateHealth * slotsScaler());
     }
 
     @Override
@@ -35,11 +40,13 @@ public class Plate implements Armor {
 
     @Override
     public int getDexterity() {
-        return ArmorStats.plateDexterity;
+        String slot = getSlot();
+        return (int)(ArmorStats.plateDexterity * slotsScaler());
     }
 
     @Override
     public int getStrength() {
-        return ArmorStats.plateStrength;
+        String slot = getSlot();
+        return (int)(ArmorStats.plateStrength * slotsScaler());
     }
 }

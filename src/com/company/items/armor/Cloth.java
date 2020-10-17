@@ -22,22 +22,26 @@ public class Cloth implements Armor {
         return slot;
     }
 
+    public double slotsScaler() {
+        return SlotsScaler.countSlotsScaler(slot);
+    }
+
     @Override
     public int getHealth() {
         String slot = getSlot();
-        return (int)(ArmorStats.clothHealth * SlotsScaler.countSlotsScaler(slot));
+        return (int)(ArmorStats.clothHealth * slotsScaler());
     }
 
     @Override
     public int getIntelligence() {
         String slot = getSlot();
-        return (int)(ArmorStats.clothIntelligence * SlotsScaler.countSlotsScaler(slot));
+        return (int)(ArmorStats.clothIntelligence * slotsScaler());
     }
 
     @Override
     public int getDexterity() {
         String slot = getSlot();
-        return (int)(ArmorStats.clothDexterity * SlotsScaler.countSlotsScaler(slot));
+        return (int)(ArmorStats.clothDexterity * slotsScaler());
     }
 
     @Override

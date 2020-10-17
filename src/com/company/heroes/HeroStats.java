@@ -1,16 +1,16 @@
 package com.company.heroes;
 
-public class CharacterStats {
+public class HeroStats {
 
     private int health;
     private int strength;
     private int dexterity;
     private int intelligence;
 
-    public CharacterStats() {
+    public HeroStats() {
     }
 
-    public CharacterStats(int health, int strength, int dexterity, int intelligence) {
+    public HeroStats(int health, int strength, int dexterity, int intelligence) {
         this.health = health;
         this.strength = strength;
         this.dexterity = dexterity;

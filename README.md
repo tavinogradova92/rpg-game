@@ -20,7 +20,7 @@
 
 ![screenshot](resources/screenshot2.jpg)
 
-* Equipping the character with different types of weapon and showing how their attributes change accordingly
+* Equipping the character with different types of weapon
 
 ![screenshot](resources/screenshot3.jpg)
 

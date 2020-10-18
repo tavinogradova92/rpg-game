@@ -13,20 +13,26 @@
 ## Logic implemented in the project:
 
 * Generating the character and demonstration of how their attributes change accordingly
+
 ![screenshot](resources/screenshot1.jpg)
 
 * Creating a weapon
+
 ![screenshot](resources/screenshot2.jpg)
 
 * Equipping the character with different types of weapon and showing how their attributes change accordingly
+
 ![screenshot](resources/screenshot3.jpg)
 
 * Changing the body slot of the armor and showing the change of attributes accordingly
+
 ![screenshot](resources/screenshot4.jpg)
 
 * Showing the level of XP to get to the next level which grows by 10% on each level
+
 ![screenshot](resources/screenshot5.jpg)
 
 * Showing the attack damage that is counted as a sum of the weapon damage that is increased according to the character's attribute
+
 ![screenshot](resources/screenshot6.jpg)
 

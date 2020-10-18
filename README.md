@@ -10,7 +10,7 @@
 
 * Armor put on body, head or legs of types cloth, leather or plate
 
-## What logic is implemented in the project:
+## Logic implemented in the project:
 
 * Generating the character and demonstration of how their attributes change accordingly
 ![screenshot](resources/screenshot1.jpg)

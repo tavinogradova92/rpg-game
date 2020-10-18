@@ -1,5 +1,7 @@
 package com.company.heroes;
 
+import com.company.items.weapons.*;
+
 public class Mage extends Hero {
 
     private int level;
@@ -11,11 +13,6 @@ public class Mage extends Hero {
         level = 1;
         currentXP = 0;
         nextLevelXP = 100;
-    }
-
-    @Override
-    public int attack() {
-        return 0;
     }
 
 
@@ -45,5 +42,10 @@ public class Mage extends Hero {
             currentXP = 0 + remainingXP;
         }
         return remainingXP;
+    }
+
+    @Override
+    public int attack(Weapon weapon, HeroStats stats) {
+        return super.attack(weapon, stats);
     }
 }

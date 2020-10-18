@@ -99,5 +99,16 @@ public class Main {
         System.out.println("------------");
         int nextLevelXP = 100;
         System.out.println("You are at level 2 now. You need to reach " + mulan.calculateXpToNextLevel(nextLevelXP) + " XP to get to the next level.");
+
+        // Attacking, counting the total damage power
+        mulan.equipWithWeapon(wand);
+        cloth.setSlot("Body");
+        System.out.println("------------");
+        System.out.println("Your Hero has the following attack power now:");
+        System.out.println("Your weapon is a wand. The type is " + mulan.getWeapon().weaponType());
+        System.out.println("Weapon damage is " + mulan.getWeapon().countAttackPower());
+        System.out.println("Your armor is " + mulan.getArmor().getName());
+        System.out.println("Slot: " + cloth.getSlot());
+        System.out.println("Your final damage with the weapon and armor on are " + mulan.attack(wand, mulan.getHeroStats()));
     }
 }

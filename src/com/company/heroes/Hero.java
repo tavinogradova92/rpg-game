@@ -1,6 +1,6 @@
 package com.company.heroes;
 import com.company.items.armor.Armor;
-import com.company.items.weapons.Weapon;
+import com.company.items.weapons.*;
 
 
 public abstract class Hero implements HeroStatsChanger {
@@ -12,13 +12,9 @@ public abstract class Hero implements HeroStatsChanger {
         private Armor armor;
         private Weapon weapon;
         private int level;
-        private int xpToNextLevel;
-
+        private int totalAttackPower;
 
     // Constructor
-
-    public Hero() {
-    }
 
     public Hero(int health, int strength, int dexterity, int intelligence) {
         this.name = "";
@@ -80,7 +76,17 @@ public abstract class Hero implements HeroStatsChanger {
         return weapon;
     }
 
-    public abstract int attack();
+    public int attack(Weapon weapon, HeroStats stats) {
+        int totalAttackPower = 0;
+        if(weapon instanceof Melee){
+            totalAttackPower = (int)((weapon.countAttackPower()) + (getHeroStats().getStrength() * 1.5));
+        } else if(weapon instanceof Ranged){
+            totalAttackPower = ((weapon.countAttackPower()) + (getHeroStats().getDexterity() * 2));
+        } else if(weapon instanceof Magic){
+            totalAttackPower = ((weapon.countAttackPower()) + (getHeroStats().getIntelligence() * 3));
+        }
+        return totalAttackPower;
+    }
 
 
 }
